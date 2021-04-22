@@ -210,5 +210,5 @@ g.add_edges_from([
 
 
 # Plot it
-nx.draw(g, with_labels=True,node_color=range(g.number_of_nodes()))
+nx.draw_circular(g, with_labels=True,node_color=range(g.number_of_nodes()))
 plt.show()

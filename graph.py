@@ -3,10 +3,10 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 # Build your graph
-graph = nx.Graph()
+g = nx.Graph()
 
 # Luokat yhdistettynä
-graph.add_nodes_from([
+g.add_nodes_from([
     'Adaptoituminen',
     'Aktiivisuus',
     'Analyyttiset- ja ongelmanratkaisutaidot',
@@ -40,11 +40,12 @@ graph.add_nodes_from([
     'Uuden oppiminen',
     'Vastuullisuus',
     'Yhteistyö',
-    'Yhteisvastuu'])
+    'Yhteisvastuu'
+])
 
 
 # Adaptoituminen
-graph.add_edges_from([
+g.add_edges_from([
     ('Paineen ja stressin sietäminen', 'Adaptoituminen'),
     ('Ongelmanratkaisukyky', 'Adaptoituminen'),
     ('Osallistuminen', 'Adaptoituminen'),
@@ -53,7 +54,7 @@ graph.add_edges_from([
 ])
 # Aktiivisuus
 
-graph.add_edges_from([
+g.add_edges_from([
     ('Tietoisuus', 'Aktiivisuus'),
     ('Motivaatio', 'Aktiivisuus'),
     ('Yhteistyö', 'Aktiivisuus'),
@@ -62,7 +63,7 @@ graph.add_edges_from([
 ])
 
 # Analyyttiset- ja ongelmanratkaisutaidot
-graph.add_edges_from([
+g.add_edges_from([
     ('Itseluottamus', 'Analyyttiset- ja ongelmanratkaisutaidot'),
     ('Rohkeus', 'Analyyttiset- ja ongelmanratkaisutaidot'),
     ('Ongelmanratkaisukyky', 'Analyyttiset- ja ongelmanratkaisutaidot'),
@@ -71,9 +72,9 @@ graph.add_edges_from([
     ('Mittaus ja monitorointi', 'Analyyttiset- ja ongelmanratkaisutaidot'),
     ('Analyyttiset taidot', 'Analyyttiset- ja ongelmanratkaisutaidot')
 ])
-#'Henkilökohtaiset ominaisuudet'
+# 'Henkilökohtaiset ominaisuudet'
 
-graph.add_edges_from([
+g.add_edges_from([
     ('Keskinäinen kunnioitus', 'Henkilökohtaiset ominaisuudet'),
     ('Luottamus', 'Henkilökohtaiset ominaisuudet'),
     ('Haavoittuvuus', 'Henkilökohtaiset ominaisuudet'),
@@ -95,7 +96,7 @@ graph.add_edges_from([
 ])
 
 # Innovatiivisuus
-graph.add_edges_from([
+g.add_edges_from([
     ('Rohkeus', 'Innovatiivisuus'),
     ('Ongelmanratkaisukyky', 'Innovatiivisuus'),
     ('Päätöksen tekeminen', 'Innovatiivisuus'),
@@ -104,7 +105,7 @@ graph.add_edges_from([
 ])
 
 # Itsenäisyys
-graph.add_edges_from([
+g.add_edges_from([
     ('Itseluottamus', 'Itsenäisyys'),
     ('Paineen ja stressin sietäminen', 'Itsenäisyys'),
     ('Päätöksen tekeminen', 'Itsenäisyys'),
@@ -115,13 +116,13 @@ graph.add_edges_from([
 ])
 
 # Itseohjautuvuus
-graph.add_edges_from([
+g.add_edges_from([
     ('Itsenäinen työskentely', 'Itseohjautuvuus'),
     ('Johtaminen', 'Itseohjautuvuus'),
 ])
 
 # Johtajuus
-graph.add_edges_from([
+g.add_edges_from([
     ('Motivaatio', 'Johtajuus'),
     ('Mittaus ja monitorointi', 'Johtajuus'),
     ('Ihmissuhdetaidot', 'Johtajuus'),
@@ -129,7 +130,7 @@ graph.add_edges_from([
 ])
 
 # Oppiminen
-graph.add_edges_from([
+g.add_edges_from([
     ('Motivaatio', 'Oppiminen'),
     ('Yhteistyö', 'Oppiminen'),
     ('Mittaus ja monitorointi', 'Oppiminen'),
@@ -141,7 +142,7 @@ graph.add_edges_from([
 ])
 
 # Organisointitaidot
-graph.add_edges_from([
+g.add_edges_from([
     ('Ongelmanratkaisukyky', 'Organisointitaidot'),
     ('Päätöksen tekeminen', 'Organisointitaidot'),
     ('Tietoisuus', 'Organisointitaidot'),
@@ -150,7 +151,7 @@ graph.add_edges_from([
 ])
 
 # Sosiaaliset taidot
-graph.add_edges_from([
+g.add_edges_from([
     ('Keskinäinen kunnioitus', 'Sosiaaliset taidot'),
     ('Luottamus', 'Sosiaaliset taidot'),
     ('Haavoittuvuus', 'Sosiaaliset taidot'),
@@ -166,7 +167,7 @@ graph.add_edges_from([
 ])
 
 # Tietoisuus
-graph.add_edges_from([
+g.add_edges_from([
     ('Yhteisvastuu', 'Tietoisuus'),
     ('Ongelmanratkaisukyky', 'Tietoisuus'),
     ('Päätöksen tekeminen', 'Tietoisuus'),
@@ -181,7 +182,7 @@ graph.add_edges_from([
 ])
 
 # Vastuullisuus
-graph.add_edges_from([
+g.add_edges_from([
     ('Haavoittuvuus', 'Vastuullisuus'),
     ('Yhteisvastuu', 'Vastuullisuus'),
     ('Vastuullisuus', 'Vastuullisuus'),
@@ -194,7 +195,7 @@ graph.add_edges_from([
 ])
 
 # Yhteistyö
-graph.add_edges_from([
+g.add_edges_from([
     ('Keskinäinen kunnioitus', 'Yhteistyö'),
     ('Luottamus', 'Yhteistyö'),
     ('Haavoittuvuus', 'Yhteistyö'),
@@ -209,5 +210,5 @@ graph.add_edges_from([
 
 
 # Plot it
-nx.draw(graph, with_labels=True)
+nx.draw(g, with_labels=True,node_color=range(g.number_of_nodes()))
 plt.show()

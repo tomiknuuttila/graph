@@ -205,18 +205,28 @@ g.add_edges_from([
     ('Osallistuminen', 'Yhteistyö'),
 ])
 
+# Get node colors by class
+
+
 def colorForNodetype(type):
     if (type == 'Yläluokka'):
         return '#CCEBC5'
     else:
         return '#B3CDE3'
 
-# Get node colors by class
-nodetypes = [u[1] for u in g.nodes(data="nodetype")]
 
-colors = list(map(colorForNodetype, nodetypes))
-print(colors);
+nodetypes = [u[1] for u in g.nodes(data="nodetype")]
+node_colors = list(map(colorForNodetype, nodetypes))
+
+# Get colors for edges
+edge_colors = range(g.number_of_edges())
+
+# Get pos
+pos = nx.circular_layout(g,scale=3)
 
 # Plot it
-nx.draw_circular(g,with_labels=True, node_color=colors, node_size=500)
+plt.figure(1,figsize=(12,12))
+nx.draw_networkx_nodes(g, pos=pos,node_color=node_colors, node_size=300)
+nx.draw_networkx_edges(g, pos=pos,edge_color=edge_colors, edge_cmap=plt.get_cmap('Pastel1'))
+nx.draw_networkx_labels(g, pos=pos, font_size=10)
 plt.show()

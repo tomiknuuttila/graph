@@ -6,43 +6,40 @@ import matplotlib.pyplot as plt
 g = nx.Graph()
 
 # Luokat yhdistettynä
-g.add_nodes_from([
-    ('Adaptoituminen', {"class": "Yläluokka"}),
-    ('Aktiivisuus', {"class": "Yläluokka"}),
-    ('Analyyttiset- ja ongelmanratkaisutaidot', {"class": "Yläluokka"}),
-    ('Analyyttiset taidot', {"class": "Alaluokka"}),
-    ('Avoimuus', {"class": "Alaluokka"}),
-    ('Haavoittuvuus', {"class": "Alaluokka"}),
-    ('Henkilökohtaiset ominaisuudet', {"class": "Yläluokka"}),
-    ('Ihmissuhdetaidot', {"class": "Alaluokka"}),
-    ('Innovatiivisuus', {"class": "Yläluokka"}),
-    ('Itseluottamus', {"class": "Alaluokka"}),
-    ('Itsenäinen työskentely', {"class": "Alaluokka"}),
-    ('Itsenäisyys', {"class": "Yläluokka"}),
-    ('Itseohjautuvuus', {"class": "Yläluokka"}),
-    ('Johtajuus', {"class": "Yläluokka"}),
-    ('Johtaminen', {"class": "Alaluokka"}),
-    ('Keskinäinen kunnioitus', {"class": "Alaluokka"}),
-    ('Kommunikaatiotaidot', {"class": "Alaluokka"}),
-    ('Kulttuurien tunteminen', {"class": "Alaluokka"}),
-    ('Luottamus', {"class": "Alaluokka"}),
-    ('Mittaus ja monitorointi', {"class": "Alaluokka"}),
-    ('Ongelmanratkaisukyky', {"class": "Alaluokka"}),
-    ('Oppiminen', {"class": "Yläluokka"}),
-    ('Organisaation tunteminen', {"class": "Alaluokka"}),
-    ('Organisointitaidot', {"class": "Yläluokka"}),
-    ('Osallistuminen', {"class": "Alaluokka"}),
-    ('Päätöksen tekeminen', {"class": "Alaluokka"}),
-    ('Paineen ja stressin sietäminen', {"class": "Alaluokka"}),
-    ('Rohkeus', {"class": "Alaluokka"}),
-    ('Sosiaaliset taidot', {"class": "Yläluokka"}),
-    ('Tietoisuus', {"class": "Yläluokka"}),
-    ('Uuden oppiminen', {"class": "Alaluokka"}),
-    ('Vastuullisuus', {"class": "Yläluokka"}),
-    ('Yhteistyö', {"class": "Yläluokka"}),
-    ('Yhteisvastuu', {"class": "Alaluokka"}),
-])
-
+g.add_node('Adaptoituminen', nodetype='Yläluokka')
+g.add_node('Aktiivisuus', nodetype='Yläluokka')
+g.add_node('Analyyttiset- ja ongelmanratkaisutaidot', nodetype='Yläluokka')
+g.add_node('Analyyttiset taidot', nodetype='Alaluokka')
+g.add_node('Avoimuus', nodetype='Alaluokka')
+g.add_node('Haavoittuvuus', nodetype='Alaluokka')
+g.add_node('Henkilökohtaiset ominaisuudet', nodetype='Yläluokka')
+g.add_node('Ihmissuhdetaidot', nodetype='Alaluokka')
+g.add_node('Innovatiivisuus', nodetype='Yläluokka')
+g.add_node('Itseluottamus', nodetype='Alaluokka')
+g.add_node('Itsenäinen työskentely', nodetype='Alaluokka')
+g.add_node('Itsenäisyys', nodetype='Yläluokka')
+g.add_node('Itseohjautuvuus', nodetype='Yläluokka')
+g.add_node('Johtajuus', nodetype='Yläluokka')
+g.add_node('Johtaminen', nodetype='Alaluokka')
+g.add_node('Keskinäinen kunnioitus', nodetype='Alaluokka')
+g.add_node('Kommunikaatiotaidot', nodetype='Alaluokka')
+g.add_node('Kulttuurien tunteminen', nodetype='Alaluokka')
+g.add_node('Luottamus', nodetype='Alaluokka')
+g.add_node('Mittaus ja monitorointi', nodetype='Alaluokka')
+g.add_node('Ongelmanratkaisukyky', nodetype='Alaluokka')
+g.add_node('Oppiminen', nodetype='Yläluokka')
+g.add_node('Organisaation tunteminen', nodetype='Alaluokka')
+g.add_node('Organisointitaidot', nodetype='Yläluokka')
+g.add_node('Osallistuminen', nodetype='Alaluokka')
+g.add_node('Päätöksen tekeminen', nodetype='Alaluokka')
+g.add_node('Paineen ja stressin sietäminen', nodetype='Alaluokka')
+g.add_node('Rohkeus', nodetype='Alaluokka')
+g.add_node('Sosiaaliset taidot', nodetype='Yläluokka')
+g.add_node('Tietoisuus', nodetype='Yläluokka')
+g.add_node('Uuden oppiminen', nodetype='Alaluokka')
+g.add_node('Vastuullisuus', nodetype='Yläluokka')
+g.add_node('Yhteistyö', nodetype='Yläluokka')
+g.add_node('Yhteisvastuu', nodetype='Alaluokka')
 
 # Adaptoituminen
 g.add_edges_from([
@@ -208,7 +205,18 @@ g.add_edges_from([
     ('Osallistuminen', 'Yhteistyö'),
 ])
 
+def colorForNodetype(type):
+    if (type == 'Yläluokka'):
+        return '#CCEBC5'
+    else:
+        return '#B3CDE3'
+
+# Get node colors by class
+nodetypes = [u[1] for u in g.nodes(data="nodetype")]
+
+colors = list(map(colorForNodetype, nodetypes))
+print(colors);
 
 # Plot it
-nx.draw_circular(g, with_labels=True, node_color=range(g.number_of_nodes()), node_size=1500)
+nx.draw_circular(g,with_labels=True, node_color=colors, node_size=500)
 plt.show()

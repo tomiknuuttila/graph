@@ -42,170 +42,170 @@ g.add_node('Yhteistyö', nodetype='Yläluokka')
 g.add_node('Yhteisvastuu', nodetype='Alaluokka')
 
 # Adaptoituminen
-g.add_edges_from([
-    ('Paineen ja stressin sietäminen', 'Adaptoituminen'),
-    ('Ongelmanratkaisukyky', 'Adaptoituminen'),
-    ('Osallistuminen', 'Adaptoituminen'),
-    ('Päätöksen tekeminen', 'Adaptoituminen'),
-    ('Uuden oppiminen', 'Adaptoituminen'),
+g.add_weighted_edges_from([
+    ('Paineen ja stressin sietäminen', 'Adaptoituminen', 1),
+    ('Ongelmanratkaisukyky', 'Adaptoituminen', 1),
+    ('Osallistuminen', 'Adaptoituminen', 1),
+    ('Päätöksen tekeminen', 'Adaptoituminen', 1),
+    ('Uuden oppiminen', 'Adaptoituminen', 1),
 ])
 # Aktiivisuus
 
-g.add_edges_from([
-    ('Tietoisuus', 'Aktiivisuus'),
-    ('Motivaatio', 'Aktiivisuus'),
-    ('Yhteistyö', 'Aktiivisuus'),
-    ('Uuden oppiminen', 'Aktiivisuus'),
-    ('Osallistuminen', 'Aktiivisuus')
+g.add_weighted_edges_from([
+    ('Tietoisuus', 'Aktiivisuus', 2),
+    ('Motivaatio', 'Aktiivisuus', 2),
+    ('Yhteistyö', 'Aktiivisuus', 2),
+    ('Uuden oppiminen', 'Aktiivisuus', 2),
+    ('Osallistuminen', 'Aktiivisuus', 2),
 ])
 
 # Analyyttiset- ja ongelmanratkaisutaidot
-g.add_edges_from([
-    ('Itseluottamus', 'Analyyttiset- ja ongelmanratkaisutaidot'),
-    ('Rohkeus', 'Analyyttiset- ja ongelmanratkaisutaidot'),
-    ('Ongelmanratkaisukyky', 'Analyyttiset- ja ongelmanratkaisutaidot'),
-    ('Paineen ja stressin sietäminen', 'Analyyttiset- ja ongelmanratkaisutaidot'),
-    ('Päätöksen tekeminen', 'Analyyttiset- ja ongelmanratkaisutaidot'),
-    ('Mittaus ja monitorointi', 'Analyyttiset- ja ongelmanratkaisutaidot'),
-    ('Analyyttiset taidot', 'Analyyttiset- ja ongelmanratkaisutaidot')
+g.add_weighted_edges_from([
+    ('Itseluottamus', 'Analyyttiset- ja ongelmanratkaisutaidot', 3),
+    ('Rohkeus', 'Analyyttiset- ja ongelmanratkaisutaidot', 3),
+    ('Ongelmanratkaisukyky', 'Analyyttiset- ja ongelmanratkaisutaidot', 3),
+    ('Paineen ja stressin sietäminen', 'Analyyttiset- ja ongelmanratkaisutaidot', 3),
+    ('Päätöksen tekeminen', 'Analyyttiset- ja ongelmanratkaisutaidot', 3),
+    ('Mittaus ja monitorointi', 'Analyyttiset- ja ongelmanratkaisutaidot', 3),
+    ('Analyyttiset taidot', 'Analyyttiset- ja ongelmanratkaisutaidot', 3),
 ])
 # 'Henkilökohtaiset ominaisuudet'
 
-g.add_edges_from([
-    ('Keskinäinen kunnioitus', 'Henkilökohtaiset ominaisuudet'),
-    ('Luottamus', 'Henkilökohtaiset ominaisuudet'),
-    ('Haavoittuvuus', 'Henkilökohtaiset ominaisuudet'),
-    ('Kommunikaatiotaidot', 'Henkilökohtaiset ominaisuudet'),
-    ('Itseluottamus', 'Henkilökohtaiset ominaisuudet'),
-    ('Rohkeus', 'Henkilökohtaiset ominaisuudet'),
-    ('Paineen ja stressin sietäminen', 'Henkilökohtaiset ominaisuudet'),
-    ('Päätöksen tekeminen', 'Henkilökohtaiset ominaisuudet'),
-    ('Vastuullisuus', 'Henkilökohtaiset ominaisuudet'),
-    ('Organisaation tunteminen', 'Henkilökohtaiset ominaisuudet'),
-    ('Motivaatio', 'Henkilökohtaiset ominaisuudet'),
-    ('Yhteistyö', 'Henkilökohtaiset ominaisuudet'),
-    ('Ihmissuhdetaidot', 'Henkilökohtaiset ominaisuudet'),
-    ('Analyyttiset taidot', 'Henkilökohtaiset ominaisuudet'),
-    ('Kulttuurien tunteminen', 'Henkilökohtaiset ominaisuudet'),
-    ('Johtaminen', 'Henkilökohtaiset ominaisuudet'),
-    ('Avoimuus', 'Henkilökohtaiset ominaisuudet'),
-    ('Osallistuminen', 'Henkilökohtaiset ominaisuudet'),
+g.add_weighted_edges_from([
+    ('Keskinäinen kunnioitus', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Luottamus', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Haavoittuvuus', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Kommunikaatiotaidot', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Itseluottamus', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Rohkeus', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Paineen ja stressin sietäminen', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Päätöksen tekeminen', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Vastuullisuus', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Organisaation tunteminen', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Motivaatio', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Yhteistyö', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Ihmissuhdetaidot', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Analyyttiset taidot', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Kulttuurien tunteminen', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Johtaminen', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Avoimuus', 'Henkilökohtaiset ominaisuudet', 4),
+    ('Osallistuminen', 'Henkilökohtaiset ominaisuudet', 4),
 ])
 
 # Innovatiivisuus
-g.add_edges_from([
-    ('Rohkeus', 'Innovatiivisuus'),
-    ('Ongelmanratkaisukyky', 'Innovatiivisuus'),
-    ('Päätöksen tekeminen', 'Innovatiivisuus'),
-    ('Uuden oppiminen', 'Innovatiivisuus'),
-    ('Osallistuminen', 'Innovatiivisuus'),
+g.add_weighted_edges_from([
+    ('Rohkeus', 'Innovatiivisuus', 5),
+    ('Ongelmanratkaisukyky', 'Innovatiivisuus', 5),
+    ('Päätöksen tekeminen', 'Innovatiivisuus', 5),
+    ('Uuden oppiminen', 'Innovatiivisuus', 5),
+    ('Osallistuminen', 'Innovatiivisuus', 5),
 ])
 
 # Itsenäisyys
-g.add_edges_from([
-    ('Itseluottamus', 'Itsenäisyys'),
-    ('Paineen ja stressin sietäminen', 'Itsenäisyys'),
-    ('Päätöksen tekeminen', 'Itsenäisyys'),
-    ('Tietoisuus', 'Itsenäisyys'),
-    ('Organisaation tunteminen', 'Itsenäisyys'),
-    ('Motivaatio', 'Itsenäisyys'),
-    ('Itsenäinen työskentely', 'Itsenäisyys'),
+g.add_weighted_edges_from([
+    ('Itseluottamus', 'Itsenäisyys', 6),
+    ('Paineen ja stressin sietäminen', 'Itsenäisyys', 6),
+    ('Päätöksen tekeminen', 'Itsenäisyys', 6),
+    ('Tietoisuus', 'Itsenäisyys', 6),
+    ('Organisaation tunteminen', 'Itsenäisyys', 6),
+    ('Motivaatio', 'Itsenäisyys', 6),
+    ('Itsenäinen työskentely', 'Itsenäisyys', 6),
 ])
 
 # Itseohjautuvuus
-g.add_edges_from([
-    ('Itsenäinen työskentely', 'Itseohjautuvuus'),
-    ('Johtaminen', 'Itseohjautuvuus'),
+g.add_weighted_edges_from([
+    ('Itsenäinen työskentely', 'Itseohjautuvuus', 7),
+    ('Johtaminen', 'Itseohjautuvuus', 7),
 ])
 
 # Johtajuus
-g.add_edges_from([
-    ('Motivaatio', 'Johtajuus'),
-    ('Mittaus ja monitorointi', 'Johtajuus'),
-    ('Ihmissuhdetaidot', 'Johtajuus'),
-    ('Johtaminen', 'Johtajuus'),
+g.add_weighted_edges_from([
+    ('Motivaatio', 'Johtajuus', 8),
+    ('Mittaus ja monitorointi', 'Johtajuus', 8),
+    ('Ihmissuhdetaidot', 'Johtajuus', 8),
+    ('Johtaminen', 'Johtajuus', 8),
 ])
 
 # Oppiminen
-g.add_edges_from([
-    ('Motivaatio', 'Oppiminen'),
-    ('Yhteistyö', 'Oppiminen'),
-    ('Mittaus ja monitorointi', 'Oppiminen'),
-    ('Uuden oppiminen', 'Oppiminen'),
-    ('Analyyttiset taidot', 'Oppiminen'),
-    ('Kulttuurien tunteminen', 'Oppiminen'),
-    ('Johtaminen', 'Oppiminen'),
-    ('Avoimuus', 'Oppiminen'),
+g.add_weighted_edges_from([
+    ('Motivaatio', 'Oppiminen', 9),
+    ('Yhteistyö', 'Oppiminen', 9),
+    ('Mittaus ja monitorointi', 'Oppiminen', 9),
+    ('Uuden oppiminen', 'Oppiminen', 9),
+    ('Analyyttiset taidot', 'Oppiminen', 9),
+    ('Kulttuurien tunteminen', 'Oppiminen', 9),
+    ('Johtaminen', 'Oppiminen', 9),
+    ('Avoimuus', 'Oppiminen', 9),
 ])
 
 # Organisointitaidot
-g.add_edges_from([
-    ('Ongelmanratkaisukyky', 'Organisointitaidot'),
-    ('Päätöksen tekeminen', 'Organisointitaidot'),
-    ('Tietoisuus', 'Organisointitaidot'),
-    ('Mittaus ja monitorointi', 'Organisointitaidot'),
-    ('Johtaminen', 'Organisointitaidot'),
+g.add_weighted_edges_from([
+    ('Ongelmanratkaisukyky', 'Organisointitaidot', 10),
+    ('Päätöksen tekeminen', 'Organisointitaidot', 10),
+    ('Tietoisuus', 'Organisointitaidot', 10),
+    ('Mittaus ja monitorointi', 'Organisointitaidot', 10),
+    ('Johtaminen', 'Organisointitaidot', 10),
 ])
 
 # Sosiaaliset taidot
-g.add_edges_from([
-    ('Keskinäinen kunnioitus', 'Sosiaaliset taidot'),
-    ('Luottamus', 'Sosiaaliset taidot'),
-    ('Haavoittuvuus', 'Sosiaaliset taidot'),
-    ('Kommunikaatiotaidot', 'Sosiaaliset taidot'),
-    ('Itseluottamus', 'Sosiaaliset taidot'),
-    ('Rohkeus', 'Sosiaaliset taidot'),
-    ('Yhteistyö', 'Sosiaaliset taidot'),
-    ('Ihmissuhdetaidot', 'Sosiaaliset taidot'),
-    ('Kulttuurien tunteminen', 'Sosiaaliset taidot'),
-    ('Johtaminen', 'Sosiaaliset taidot'),
-    ('Avoimuus', 'Sosiaaliset taidot'),
-    ('Osallistuminen', 'Sosiaaliset taidot'),
+g.add_weighted_edges_from([
+    ('Keskinäinen kunnioitus', 'Sosiaaliset taidot', 11),
+    ('Luottamus', 'Sosiaaliset taidot', 11),
+    ('Haavoittuvuus', 'Sosiaaliset taidot', 11),
+    ('Kommunikaatiotaidot', 'Sosiaaliset taidot', 11),
+    ('Itseluottamus', 'Sosiaaliset taidot', 11),
+    ('Rohkeus', 'Sosiaaliset taidot', 11),
+    ('Yhteistyö', 'Sosiaaliset taidot', 11),
+    ('Ihmissuhdetaidot', 'Sosiaaliset taidot', 11),
+    ('Kulttuurien tunteminen', 'Sosiaaliset taidot', 11),
+    ('Johtaminen', 'Sosiaaliset taidot', 11),
+    ('Avoimuus', 'Sosiaaliset taidot', 11),
+    ('Osallistuminen', 'Sosiaaliset taidot', 11),
 ])
 
 # Tietoisuus
-g.add_edges_from([
-    ('Yhteisvastuu', 'Tietoisuus'),
-    ('Ongelmanratkaisukyky', 'Tietoisuus'),
-    ('Päätöksen tekeminen', 'Tietoisuus'),
-    ('Tietoisuus', 'Tietoisuus'),
-    ('Organisaation tunteminen', 'Tietoisuus'),
-    ('Mittaus ja monitorointi', 'Tietoisuus'),
-    ('Ihmissuhdetaidot', 'Tietoisuus'),
-    ('Analyyttiset taidot', 'Tietoisuus'),
-    ('Kulttuurien tunteminen', 'Tietoisuus'),
-    ('Avoimuus', 'Tietoisuus'),
-    ('Osallistuminen', 'Tietoisuus'),
+g.add_weighted_edges_from([
+    ('Yhteisvastuu', 'Tietoisuus', 12),
+    ('Ongelmanratkaisukyky', 'Tietoisuus', 12),
+    ('Päätöksen tekeminen', 'Tietoisuus', 12),
+    ('Tietoisuus', 'Tietoisuus', 12),
+    ('Organisaation tunteminen', 'Tietoisuus', 12),
+    ('Mittaus ja monitorointi', 'Tietoisuus', 12),
+    ('Ihmissuhdetaidot', 'Tietoisuus', 12),
+    ('Analyyttiset taidot', 'Tietoisuus', 12),
+    ('Kulttuurien tunteminen', 'Tietoisuus', 12),
+    ('Avoimuus', 'Tietoisuus', 12),
+    ('Osallistuminen', 'Tietoisuus', 12),
 ])
 
 # Vastuullisuus
-g.add_edges_from([
-    ('Haavoittuvuus', 'Vastuullisuus'),
-    ('Yhteisvastuu', 'Vastuullisuus'),
-    ('Vastuullisuus', 'Vastuullisuus'),
-    ('Organisaation tunteminen', 'Vastuullisuus'),
-    ('Motivaatio', 'Vastuullisuus'),
-    ('Mittaus ja monitorointi', 'Vastuullisuus'),
-    ('Johtaminen', 'Vastuullisuus'),
-    ('Avoimuus', 'Vastuullisuus'),
-    ('Osallistuminen', 'Vastuullisuus'),
+g.add_weighted_edges_from([
+    ('Haavoittuvuus', 'Vastuullisuus', 13),
+    ('Yhteisvastuu', 'Vastuullisuus', 13),
+    ('Vastuullisuus', 'Vastuullisuus', 13),
+    ('Organisaation tunteminen', 'Vastuullisuus', 13),
+    ('Motivaatio', 'Vastuullisuus', 13),
+    ('Mittaus ja monitorointi', 'Vastuullisuus', 13),
+    ('Johtaminen', 'Vastuullisuus', 13),
+    ('Avoimuus', 'Vastuullisuus', 13),
+    ('Osallistuminen', 'Vastuullisuus', 13),
 ])
 
 # Yhteistyö
-g.add_edges_from([
-    ('Keskinäinen kunnioitus', 'Yhteistyö'),
-    ('Luottamus', 'Yhteistyö'),
-    ('Haavoittuvuus', 'Yhteistyö'),
-    ('Kommunikaatiotaidot', 'Yhteistyö'),
-    ('Yhteisvastuu', 'Yhteistyö'),
-    ('Vastuullisuus', 'Yhteistyö'),
-    ('Ihmissuhdetaidot', 'Yhteistyö'),
-    ('Kulttuurien tunteminen', 'Yhteistyö'),
-    ('Avoimuus', 'Yhteistyö'),
-    ('Osallistuminen', 'Yhteistyö'),
+g.add_weighted_edges_from([
+    ('Keskinäinen kunnioitus', 'Yhteistyö', 14),
+    ('Luottamus', 'Yhteistyö', 14),
+    ('Haavoittuvuus', 'Yhteistyö', 14),
+    ('Kommunikaatiotaidot', 'Yhteistyö', 14),
+    ('Yhteisvastuu', 'Yhteistyö', 14),
+    ('Vastuullisuus', 'Yhteistyö', 14),
+    ('Ihmissuhdetaidot', 'Yhteistyö', 14),
+    ('Kulttuurien tunteminen', 'Yhteistyö', 14),
+    ('Avoimuus', 'Yhteistyö', 14),
+    ('Osallistuminen', 'Yhteistyö', 14),
 ])
 
-# Get node colors by class
+# Get node colors by nodetype
 
 
 def colorForNodetype(type):
@@ -218,15 +218,12 @@ def colorForNodetype(type):
 nodetypes = [u[1] for u in g.nodes(data="nodetype")]
 node_colors = list(map(colorForNodetype, nodetypes))
 
-# Get colors for edges
-edge_colors = range(g.number_of_edges())
-
 # Get pos
-pos = nx.circular_layout(g,scale=3)
+pos = nx.circular_layout(g, scale=3)
 
 # Plot it
-plt.figure(1,figsize=(12,12))
-nx.draw_networkx_nodes(g, pos=pos,node_color=node_colors, node_size=300)
-nx.draw_networkx_edges(g, pos=pos,edge_color=edge_colors, edge_cmap=plt.get_cmap('Pastel1'))
+plt.figure(1, figsize=(12, 12))
+nx.draw_networkx_nodes(g, pos=pos, node_color=node_colors, node_size=300)
+nx.draw_networkx_edges(g, pos=pos, edge_cmap=plt.get_cmap('Pastel1'))
 nx.draw_networkx_labels(g, pos=pos, font_size=10)
 plt.show()

@@ -215,15 +215,19 @@ def colorForNodetype(type):
         return '#B3CDE3'
 
 
-nodetypes = [u[1] for u in g.nodes(data="nodetype")]
+nodetypes = [i[1] for i in g.nodes(data="nodetype")]
 node_colors = list(map(colorForNodetype, nodetypes))
+
+# Get weigths of edges
+edges_with_artributes = nx.get_edge_attributes(g, 'weight').items()
+weights = [i[1] for i in edges_with_artributes]
 
 # Get pos
 pos = nx.circular_layout(g, scale=3)
 
 # Plot it
-plt.figure(1, figsize=(12, 12))
-nx.draw_networkx_nodes(g, pos=pos, node_color=node_colors, node_size=300)
-nx.draw_networkx_edges(g, pos=pos, edge_cmap=plt.get_cmap('Pastel1'))
-nx.draw_networkx_labels(g, pos=pos, font_size=10)
+nx.draw_networkx_nodes(g, pos=pos, node_color=node_colors, node_size=1000)
+nx.draw_networkx_edges(g, pos=pos, edge_color=weights,
+                       edge_cmap=plt.get_cmap('Dark2'))
+nx.draw_networkx_labels(g, pos=pos, font_size=14, font_weight="bold")
 plt.show()
